@@ -1,1 +1,15 @@
 简单介绍及部分简单实践
+18.9.9
+1，flask是一个非常轻量级的结构，最基础的只需要6行代码就能跑起来一个项目
+
+  from flask import Flask
+  app = Flask(__name__)
+
+  @app.route('/')
+  def hello_world():
+      return 'Hello World!'
+
+  if __name__ == '__main__':
+      app.run()
+      
+  2，其中对于具体跑起来的相关设置可以直接加在run函数
