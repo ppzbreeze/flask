@@ -12,4 +12,15 @@
   if __name__ == '__main__':
       app.run()
       
-  2，其中对于具体跑起来的相关设置可以直接加在run函数
+2，其中对于具体跑起来的相关设置可以直接加在run函数，比如跑起来的IP地址及端口，是否开启调试模式等等（调试这个和pycharm的功能貌似比较重合）
+  url的添加是通过这种方式来实现的，此处是装饰器的实际应用？
+  
+  @app.route('/')
+  def index():
+      return 'Index Page'
+
+  @app.route('/hello')
+  def hello():
+      return 'Hello World'
+      
+3，显示图的条件，一个是通过二进制等方法读取，一个是把图放到网页文件中来实现
